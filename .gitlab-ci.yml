@@ -18,6 +18,8 @@ variables:
   # gitlab checkout
   DOCS_REPO_NAME: documentation
   REPO_URL: "https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.ddbuild.io/DataDog/${DOCS_REPO_NAME}.git"
+  # golang modules
+  GOPRIVATE: "github.com/DataDog/*"
 
 # ================== copy scripts =============== #
 before_script:
