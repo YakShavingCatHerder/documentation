@@ -10,7 +10,7 @@
         "start": "run-p start:**",
         "start:webpack": "webpack --config webpack.dev.js --progress",
         "start:hugo": "./node_modules/.bin/hugo server -D -d ./public -s ./ --port 1313 --navigateToChanged --noHTTPCache",
-        "prebuild": "rimraf public && npx hugo mod clean",
+        "prebuild": "rimraf public && npx hugo mod clean --all",
         "build": "run-s build:webpack build:hugo",
         "build:preview": "yarn run build:webpack:preview && yarn run build:hugo:preview",
         "build:hugo": "./node_modules/.bin/hugo -d ./public -s ./ -v --minify",
